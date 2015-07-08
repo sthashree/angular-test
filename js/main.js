@@ -1,22 +1,13 @@
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['myApp.studentlist']);
 
-app.run(function($rootScope) {
-  $rootScope.name = "Ari Lerner";
-});
 
-app.controller('MyController', function($scope) {
+app.controller('greetingController', function($scope) {
   $scope.person = {
-    name: "Ari Lerner"
+    name: "Guest"
   };
-});
-
-app.controller('ParentController', function($scope) {
-  $scope.person = {greeted: false};
-});
-
-app.controller('ChildController', function($scope) {
   $scope.sayHello = function() {
     $scope.person.greeted = true;
+    $scope.person.reply =  'Hi '+$scope.person.name+' . Thank you.';
   }
 });
