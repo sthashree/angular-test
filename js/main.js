@@ -1,5 +1,8 @@
 
-var app = angular.module('myApp', ['myApp.studentlist']);
+var app = angular.module('myApp', [
+							'myApp.driverlist',
+							'myApp.studentlist',
+  							'myApp.services']);
 
 
 app.controller('greetingController', function($scope) {
