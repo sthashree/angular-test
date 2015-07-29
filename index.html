@@ -1,7 +1,12 @@
 <!doctype html>
 <html ng-app="myApp">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/student-list.js"></script>
     <script type="text/javascript" src="js/driver-list.js"></script>
@@ -22,19 +27,21 @@
     </style>  
   </head>
   <body>
-    <div ng-controller="greetingController">
-      <input type="text" ng-model="person.name" placeholder="Enter a name here">
-      <h1>Hello, {{ person.name }}!</h1>
-      <a ng-click="sayHello()">Say hello</a>
-      <br />
-      {{ person.reply }}
-      <h2>Welcome to my Angular web </h2>
+    <header>
+      
+      <nav class="navbar navbar-default" id="menu">
+        <ul  class="nav navbar-nav navbar-left">
+          <li> <a href="#"> <i class="fa fa-home"></i> Home </a> </li>
+          <li> <a href="#about"> <i class="fa fa-shield"></i> About </a> </li>
+          <li> <a href="#contact"> <i class="fa fa-comment"></i> Contact </a> </li>
+        </ul> 
+
+      </nav>
+    </header>  
+    <div id="main">
+      <div ng-view></div>
     </div>
 
-
-<student-list/>
-
-<driver-list>
 
   </body>
 </html>
