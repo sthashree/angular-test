@@ -35,7 +35,32 @@ var app = angular.module('myApp', [
       });
 
       app.controller('contactController', function($scope) {
-          $scope.message = 'Contact us! JK. This is just a demo.';
+        $scope.comments = [
+              {
+                'comment' : 'This is comments',
+                'name'    : ' Test User',
+                'email'   : ' test@t.com'
+              }
+          ];
+
+              console.log($scope.comments)
+          // function to submit the form after all validation has occurred            
+          $scope.submitForm = function() {
+            newComment = [];
+              // check to make sure the form is completely valid
+              if ($scope.contactForm.$valid) {
+                newComment = {  comment : $scope.comment, 
+                                    name : $scope.name , 
+                                    email : $scope.email 
+                                };
+              }
+              $scope.comments.push(newComment);
+
+              console.log($scope.comments)
+
+          };
+
+          
       });
 
 app.controller('greetingController', function($scope) {

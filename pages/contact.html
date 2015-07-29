@@ -1,6 +1,37 @@
 <!-- home.html -->
-    <div class="jumbotron text-center">
-        <h1>Contact Page</h1>
-
-        <p>{{ message }}</p>
+    <div class="jumbotron text-center" ng-controller="contactController">
+        <h3>Contact Us</h3>
+        <form name="contactForm" method="POST" class="form-horizontal" ng-submit="submitForm()" novalidate>
+        	<div class="form-group">
+        	    <label for="name" class="col-sm-2 control-label">Full Name</label>
+        	    <div class="col-sm-10">
+        	      <input type="text" class="form-control" id="name" name="name" ng-model="name" placeholder="Full Name" required>
+        	       <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
+        	    </div>
+        	  </div>
+        	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+        	    <label for="email" class="col-sm-2 control-label">Email</label>
+        	    <div class="col-sm-10">
+        	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  ng-model="email">
+        	       <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        	    </div>
+        	  </div>
+        	  <div class="form-group">
+        	    <label for="comment" class="col-sm-2 control-label">Comments</label>
+        	    <div class="col-sm-10">
+        	      <textarea class="form-control" id="comment" placeholder="Comments" ng-model="comment"> </textarea>
+        	    </div>
+        	  </div>
+        	  <div class="form-group">
+        	    <div class="col-sm-10">
+        	      <button type="submit" class="btn btn-primary" value="Submit" ng-disabled="contactForm.$invalid"> Submit </button>
+        	    </div>
+        	  </div>
+        </form>
     </div>
+     <div class="jumbotron" ng-repeat="comment in comments">
+    	    <blockquote>
+    		  	<p>{{comment.comment}}</p>
+    		  	<footer>{{comment.name}} <cite title="Source Title">{{comment.email}}</cite></footer>
+    		</blockquote>
+        </div>
