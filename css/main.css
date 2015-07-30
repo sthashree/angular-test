@@ -1,7 +1,36 @@
 * {
 	font-size: 12px;
 }
+
+body {
+    font-family: Helvetica,Arial;
+    font-size: 10pt;
+    background-color:#8B8378;
+    color:#666;
+}
+
+li {
+    list-style:none;
+    display:inline-block;
+}
+
+ul{
+    padding:0;
+    margin:0;
+    white-space:nowrap;
+}
+
+.thumbnail {
+    height:50px;
+    padding:2px;
+}
+
 #container {
 	width: 1024px;
 	margin: 0 auto;
+}
+
+#thumbnail li {
+	float: left;
+	padding: 10px;
 }

@@ -16,7 +16,11 @@ var app = angular.module('myApp', [
           templateUrl : 'pages/about.html',
           controller  : 'aboutController'
       })
-
+      // route for the contact page
+      .when('/gallery', {
+          templateUrl : 'pages/gallery.html',
+          controller  : 'galleryController'
+      })
       // route for the contact page
       .when('/contact', {
           templateUrl : 'pages/contact.html',
@@ -32,6 +36,16 @@ var app = angular.module('myApp', [
 
       app.controller('aboutController', function($scope) {
           $scope.message = 'Look! I am an about page.';
+      });
+
+      app.controller('galleryController', function($scope,$http ) {
+        var url="images.json";
+        var IMAGE_WIDTH = 405;
+        $scope.thumbnail_width = 120;
+        $scope.IMAGE_LOCATION = "http://rabidgadfly.com/assets/angular/gallery1/";
+        $http.get(url).success( function(response) {
+                               $scope.images = response;
+                            });
       });
 
       app.controller('contactController', function($scope) {
