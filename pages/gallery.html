@@ -1,24 +1,21 @@
 <!-- Gallery.html -->
+
+	
+	
+	
     <div class="jumbotron text-center">
         <h1>Gallery</h1>
 
-        <div id="gallery">
-	        <div class="full_image">
-	        	<ul ng-repeat="image in images">
-	        		<li>
-	        			<img ng-src="{{image.src}}"/>
-	        		</li>
-	        	</ul>
-	        </div>
-
+        <div>
 	        <div class="clearfix" id="thumbnail">
-	        	<ul ng-repeat="image in images">
-	        		<li>
-	        			<a href="" ng-click="showImage(image.$index)">
-	        				<img ng-src="{{IMAGE_LOCATION+image.src}}" width="{{thumbnail_width}}"/>
+	        	<ul id="gallery">
+	        		<li ng-repeat="image in images">
+	        			<a href="images/full/{{image.src}}">
+	        				<img ng-src="images/thumb/{{image.src}}" width="{{thumbnail_width}}"/>
 	        			</a>	
 	        		</li>
 	        	</ul>
 	        </div>
         </div>
     </div>
+   

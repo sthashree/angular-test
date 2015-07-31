@@ -42,10 +42,18 @@ var app = angular.module('myApp', [
         var url="images.json";
         var IMAGE_WIDTH = 405;
         $scope.thumbnail_width = 120;
-        $scope.IMAGE_LOCATION = "http://rabidgadfly.com/assets/angular/gallery1/";
         $http.get(url).success( function(response) {
-                               $scope.images = response;
-                            });
+           $scope.images = response;
+           (function(window, $, PhotoSwipe){
+             $(document).ready(function(){
+                 var options = {};
+               $("#Gallery li a").photoSwipe(options); 
+             });     
+            
+           }(window, window.jQuery, window.Code.PhotoSwipe));
+        });
+
+        
       });
 
       app.controller('contactController', function($scope) {
