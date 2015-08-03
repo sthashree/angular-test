@@ -10,8 +10,8 @@
 	        <div class="clearfix" id="thumbnail">
 	        	<ul id="gallery">
 	        		<li ng-repeat="image in images">
-	        			<a href="images/full/{{image.src}}">
-	        				<img ng-src="images/thumb/{{image.src}}" width="{{thumbnail_width}}"/>
+	        			<a href="images/full/{{image.src}}" class="fancybox-thumbs" data-fancybox-group="thumb">
+	        				<img ng-src="images/thumb/{{image.src}}"/>
 	        			</a>	
 	        		</li>
 	        	</ul>

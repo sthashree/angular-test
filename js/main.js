@@ -43,14 +43,22 @@ var app = angular.module('myApp', [
         var IMAGE_WIDTH = 405;
         $scope.thumbnail_width = 120;
         $http.get(url).success( function(response) {
-           $scope.images = response;
-           (function(window, $, PhotoSwipe){
-             $(document).ready(function(){
-                 var options = {};
-               $("#Gallery li a").photoSwipe(options); 
-             });     
-            
-           }(window, window.jQuery, window.Code.PhotoSwipe));
+          $scope.images = response;
+          $('.fancybox-thumbs').fancybox({
+                  prevEffect : 'elastic',
+                  nextEffect : 'fade',
+
+                  closeBtn  : false,
+                  arrows    : false,
+                  nextClick : true,
+
+                  helpers : {
+                    thumbs : {
+                      width  : 50,
+                      height : 50
+                    }
+                  }
+                });
         });
 
         
