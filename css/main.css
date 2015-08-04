@@ -34,3 +34,9 @@ ul{
 	float: left;
 	padding: 10px;
 }
+
+#thumbnail li img{
+    padding: 2px;
+    background: #fff;
+    border: 1px solid #CCC;
+}
