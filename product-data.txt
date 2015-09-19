@@ -1,0 +1,58 @@
+[
+	{
+		"name" : "Handbag habbit",
+		"description"	: "Check out this wide selection of handbags for fall, including a Sparkle crossbody bag by Vera Bradley, a faux leather tote bag in orange, or a Michael Kors crossbody bag—plus a Dooney & Bourke nylon backpack.",
+		"price"	: 296.6,
+		"can_purchase": false,
+		"images": "1.jpg",
+		"specification" : "Yet to come",
+		"reviews" 	: [
+			{
+				"stars"	: 5,
+				"body"	: "I am writing this from the perspective of being a long-time experienced Kindle user vs. someone brand new. From an overall perspective, considering the pricing of the Kindle with Special Offers at $79 vs. higher amounts for the different flavors of Kindle available today, this one is a bargain. If you have wanted to get your kids a Kindle to encourage reading as well as sharing of books but hesitated because $119 to $400+ is a lot of money to risk with a child, maybe at $79 this is your price point.From a size standpoint, the reading screen is the exact same size as the other e-Ink Kindles. It is slightly thicker - but slightly lighter - than the Kindle Paperwhite, but to me it's not really a noticeable difference when you're holding it in a protective cover.",
+				"author"	: "user1@test.com"
+			},
+			{
+				"stars"	: 4,
+				"body"	: "Fashinable",
+				"author"	: "user2@test.com"
+			}
+		]
+	},
+	{
+		"name" : "Play It Again",
+		"description"	: "Check out these classic 1980s toys, including a He-Man action figure, an original animatronic Teddy Ruxpin doll, or a Hasbro Pogoball jumping toy—plus a die-cast Voltron set of five transforming lions.",
+		"price"	: 296.61,
+		"can_purchase": true,
+		"specification" : "Yet to come",
+		"images": "2.jpg"
+	},
+	{
+		"name" : "Fall Sports",
+		"description"	: "Find great deals on fall sports equipment, including a strength, speed, and agility training kit, a pair of JB Elite wrestling shoes by Asics, or a heavy-duty baseball home plate—plus a pair of Jiejia anti-UV silicone swimming goggles.",
+		"price"	: 29.61,
+		"can_purchase": true,
+		"specification" : "Yet to come",
+		"images": "3.jpg",
+		"reviews" 	: [
+			{
+				"stars"	: 5,
+				"body"	: "Best handbag",
+				"author"	: "user1@test.com"
+			},
+			{
+				"stars"	: 4,
+				"body"	: "I am writing this from the perspective of being a long-time experienced Kindle user vs. someone brand new. From an overall perspective, considering the pricing of the Kindle with Special Offers at $79 vs. higher amounts for the different flavors of Kindle available today, this one is a bargain. If you have wanted to get your kids a Kindle to encourage reading as well as sharing of books but hesitated because $119 to $400+ is a lot of money to risk with a child, maybe at $79 this is your price point.From a size standpoint, the reading screen is the exact same size as the other e-Ink Kindles. It is slightly thicker - but slightly lighter - than the Kindle Paperwhite, but to me it's not really a noticeable difference when you're holding it in a protective cover.",
+				"author"	: "user2@test.com"
+			}
+		]
+	},
+	{
+		"name" : "Collegiate Cool",
+		"description"	:	"Check out this selection of college dorm room essentials, including a seven-piece queen comforter set, a 24x36-inch Marilyn Monroe Ballerina poster, or an NHL royal plush raschel blanket—plus a Lavish Home organization draw.",
+		"price"	: 96.60,
+		"can_purchase": true,
+		"specification" : "Yet to come",
+		"images": "4.jpg"
+	}
+]

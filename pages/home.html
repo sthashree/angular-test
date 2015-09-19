@@ -1,18 +1,8 @@
 <!-- home.html -->
-    <div class="jumbotron text-center">
-        <h1>Home Page</h1>
-
-        <div ng-controller="greetingController">
-        <input type="text" ng-model="person.name" placeholder="Enter a name here">
-        <h1>Hello, {{ person.name }}!</h1>
-        <a ng-click="sayHello()">Say hello</a>
-        <br />
-        {{ person.reply }}
-        <h2>Welcome to my Angular web </h2>
-      </div>
-
-
-<student-list/>
-
-<driver-list>
+<div class="jumbotron text-center">
+    <div class="panel panel-default demo_header">
+        <h2> Welcome to AngularJS Demo Page </h2>
     </div>
+    <product-list/>
+
+</div>
