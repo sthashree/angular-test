@@ -76,7 +76,7 @@ textarea.form-control {
 	padding: 10px;
 }
 
-..jumbotron {
+.jumbotron {
     padding: 20px !important;
 }
 
@@ -101,4 +101,9 @@ textarea.form-control {
     .jumbotron {
         padding: 20px 10px;
     }
+}
+#thumbnail li img{
+    padding: 2px;
+    background: #fff;
+    border: 1px solid #CCC;
 }

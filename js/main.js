@@ -38,25 +38,12 @@ var app = angular.module('myApp', [
 
       app.controller('galleryController', function($scope,$http ) {
         var url="images.json";
-        var IMAGE_WIDTH = 405;
-        $scope.thumbnail_width = 120;
-        $http.get(url).success( function(response) {
-          $scope.images = response;
-          $('.fancybox-thumbs').fancybox({
-                  prevEffect : 'elastic',
-                  nextEffect : 'fade',
-
-                  closeBtn  : false,
-                  arrows    : false,
-                  nextClick : true,
-
-                  helpers : {
-                    thumbs : {
-                      width  : 50,
-                      height : 50
-                    }
-                  }
+        $('#gallery').galereya({
+            load: function(next) {
+                $.getJSON(url, function(data) {
+                    next(data);
                 });
+            }
         });
 
         
