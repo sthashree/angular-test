@@ -1,3 +1,6 @@
+/**
+* @desc: Directive to get featured product list
+*/
 angular.module('myApp.productlist',[]).directive('productList', function() {
 	
 	return {
@@ -8,7 +11,7 @@ angular.module('myApp.productlist',[]).directive('productList', function() {
 }).controller('ProductController', function ($scope,$http) {
 		var url="product-data.txt";
    		$http.get(url).success( function(response) {
-                           $scope.products = response;
-                        });
+	       $scope.products = response;
+	    });
 
 });

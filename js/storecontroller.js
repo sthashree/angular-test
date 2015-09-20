@@ -1,6 +1,5 @@
 (function() {
-	//var  app = angular.module("store", [ ]);
-
+	//product controller for product page
 	app.controller('StoreController', function($scope, $http){
 		var url="product-data.txt";
 		$http.get(url).success( function(response) {
